@@ -1,28 +1,26 @@
 # Sassfmt
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/sassfmt`. To experiment with that code, run `bin/console` for an interactive prompt.
+Sassfmt sorts properties in your .sass files according to the order defined in
+Twitter's [RECESS]. (Sassfmt actually uses [scss-lint]'s updated fork available
+[here][recess.txt].)
 
-TODO: Delete this and the text above, and describe your gem
+[RECESS]: https://github.com/twitter/recess
+[scss-lint]: https://github.com/brigade/scss-lint
+[recess.txt]: https://github.com/brigade/scss-lint/blob/fe04ca9de2d1cf1b28122fb3add7116bef995edd/data/property-sort-orders/recess.txt
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'sassfmt'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
 
     $ gem install sassfmt
 
 ## Usage
 
-TODO: Write usage instructions here
+To format a .sass file and print to stdout:
+
+    $ sassfmt /path/to/your/style.sass
+
+or
+
+    $ cat /path/to/your/style.sass | sassfmt
 
 ## Development
 
@@ -32,10 +30,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/sassfmt.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/utkarshkukreti/sassfmt.
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
