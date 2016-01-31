@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
 require "sassfmt"
+
+print Sassfmt.format(ARGF.read)
