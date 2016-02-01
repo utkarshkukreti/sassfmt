@@ -1,5 +1,20 @@
 #!/usr/bin/env ruby
 
+require "slop"
 require "sassfmt"
 
-print Sassfmt.format(ARGF.read)
+opts = Slop.parse do |o|
+  o.bool "-w", "--overwrite", "write result to source file instead of stdout"
+end
+
+if opts.arguments.any?
+  opts.arguments.each do |file|
+    if opts.overwrite?
+      File.write(file, Sassfmt.format(File.read(file)))
+    else
+      print Sassfmt.format(File.read(file))
+    end
+  end
+else
+  print Sassfmt.format($stdin.read)
+end
