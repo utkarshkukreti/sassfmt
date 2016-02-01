@@ -22,6 +22,10 @@ or
 
     $ cat /path/to/your/style.sass | sassfmt
 
+To format a .sass file and overwrite the original with it:
+
+    $ sassfmt -w /path/to/your/style.sass
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment. Run `bundle exec sassfmt` to use the gem in this directory, ignoring other installed copies of this gem.
