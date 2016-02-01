@@ -14,17 +14,17 @@ Twitter's [RECESS]. (Sassfmt actually uses [scss-lint]'s updated fork available
 
 ## Usage
 
-To format a .sass file and print to stdout:
+### Format a .sass file and print to stdout
 
     $ sassfmt /path/to/your/style.sass
 
-or
-
-    $ cat /path/to/your/style.sass | sassfmt
-
-To format a .sass file and overwrite the original with it:
+### Format a .sass file and overwrite the original with it
 
     $ sassfmt -w /path/to/your/style.sass
+
+### Format stdin and print to stdout
+
+    $ sassfmt
 
 ## Development
 
