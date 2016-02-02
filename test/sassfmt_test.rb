@@ -54,4 +54,16 @@ SASS
 
     assert_equal expected, Sassfmt.format(sass)
   end
+
+  def test_issue_1
+    sass = <<SASS
+height:hover,
+width:hover
+  background: red
+SASS
+
+    expected = sass
+
+    assert_equal expected, Sassfmt.format(sass)
+  end
 end

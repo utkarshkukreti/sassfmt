@@ -35,7 +35,7 @@ transition-timing-function background-clip backface-visibility resize
 appearance user-select interpolation-mode direction marks page set-link-source
 unicode-bidi speak).map.with_index { |p, i| [p, i] }.to_h
 
-  PROPERTY_REGEXP = /^\s*([a-zA-Z0-9-]+)\s*:/
+  PROPERTY_REGEXP = /^\s*([a-zA-Z0-9-]+)\s*:\s+/
 
   def self.format(sass)
     sass.lines.chunk do |line|
